@@ -1,0 +1,19 @@
+name: CI
+
+on:
+    push:
+        branches: [main]
+    workflow_dispatch:
+
+jobs:
+    hello:
+        runs-on: ubuntu-latest
+        steps:
+             - name: Checkout code
+               uses: actions/checkout@v7
+            
+             - name: Look around the runner
+               run: |
+                echo "Hello from a fresh runner!"
+                ls scoreboard-api
+                python3 --version
