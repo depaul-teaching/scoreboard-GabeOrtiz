@@ -1,19 +1,35 @@
+permissions:
+    contents: read
+
 name: CI
 
 on:
     push:
         branches: [main]
+    pull_request:
+        branches: [main]
     workflow_dispatch:
 
 jobs:
-    hello:
-        runs-on: ubuntu-latest
-        steps:
-             - name: Checkout code
-               uses: actions/checkout@v7
-            
-             - name: Look around the runner
-               run: |
-                echo "Hello from a fresh runner!"
-                ls scoreboard-api
-                python3 --version
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: scoreboard-api
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: scoreboard-api/requirements*.txt
+
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
+
+      - name: Run tests
+        run: pytest -v
