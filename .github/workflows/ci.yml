@@ -33,3 +33,20 @@ jobs:
 
       - name: Run tests
         run: pytest -v
+    
+  build-and-push:
+    name: Build 
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+        - name: Check out code
+          uses: actions/checkout@v7
+
+        - name: Set up Docker Buildx
+          uses: docker/setup-buildx-action@v4
+              
+        - name: Build
+          uses: docker/build-push-action@v7
+          with:
+            context: scoreboard-api
+            push: false 
