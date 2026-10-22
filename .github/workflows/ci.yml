@@ -35,6 +35,9 @@ jobs:
         run: pytest -v
     
   build-and-push:
+    permissions:
+      contents: write
+      packages: write
     name: Build 
     needs: test
     runs-on: ubuntu-latest
