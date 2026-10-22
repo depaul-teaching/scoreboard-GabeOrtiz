@@ -4,11 +4,17 @@ permissions:
 name: CI
 
 on:
-    push:
-        branches: [main]
-    pull_request:
-        branches: [main]
-    workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scoreboard-api/**"
+      - ".github/workflows/ci.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "scoreboard-api/**"
+      - ".github/workflows/ci.yml"
+  workflow_dispatch:
 
 jobs:
   test:
