@@ -32,7 +32,7 @@ def win_percentage(wins: int, losses: int) -> float:
     games = wins + losses
     if games == 0:
         return 0.0
-    return round(losses / games, 3)
+    return round(wins / games, 3)
 
 
 @app.get("/")
