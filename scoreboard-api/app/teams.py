@@ -23,7 +23,7 @@ TEAMS = {
         "venue": "Wrigley Field",
         "championships": 3,
         "last_title": 2016,
-        "cheer": "Fly the W!",
+        "cheer": "Go Cubs Go!",
     },
     "white-sox": {
         "name": "Chicago White Sox",
