@@ -1,0 +1,60 @@
+"""Chicago's pro teams. Plain data on purpose: easy to read, easy to test."""
+
+TEAMS = {
+    "bears": {
+        "name": "Chicago Bears",
+        "league": "NFL",
+        "venue": "Soldier Field",
+        "championships": 9,
+        "last_title": 1985,
+        "cheer": "Bear Down!",
+    },
+    "bulls": {
+        "name": "Chicago Bulls",
+        "league": "NBA",
+        "venue": "United Center",
+        "championships": 6,
+        "last_title": 1998,
+        "cheer": "See Red!",
+    },
+    "cubs": {
+        "name": "Chicago Cubs",
+        "league": "MLB",
+        "venue": "Wrigley Field",
+        "championships": 3,
+        "last_title": 2016,
+        "cheer": "Fly the W!",
+    },
+    "white-sox": {
+        "name": "Chicago White Sox",
+        "league": "MLB",
+        "venue": "Rate Field",
+        "championships": 3,
+        "last_title": 2005,
+        "cheer": "Go Go White Sox!",
+    },
+    "blackhawks": {
+        "name": "Chicago Blackhawks",
+        "league": "NHL",
+        "venue": "United Center",
+        "championships": 6,
+        "last_title": 2015,
+        "cheer": "One Goal!",
+    },
+    "sky": {
+        "name": "Chicago Sky",
+        "league": "WNBA",
+        "venue": "Wintrust Arena",
+        "championships": 1,
+        "last_title": 2021,
+        "cheer": "Sky's the limit!",
+    },
+    "fire": {
+        "name": "Chicago Fire FC",
+        "league": "MLS",
+        "venue": "Soldier Field",
+        "championships": 1,
+        "last_title": 1998,
+        "cheer": "Fire up!",
+    },
+}
