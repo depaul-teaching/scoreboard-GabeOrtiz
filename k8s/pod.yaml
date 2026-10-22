@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: scoreboard
+spec:
+  containers:
+    - name: scoreboard-api
+      image: ghcr.io/depaul-teaching/scoreboard-gabeortiz/scoreboard-api:latest
